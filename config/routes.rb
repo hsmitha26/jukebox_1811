@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources :carts, only: [:create]
   resources :orders, only: [:create]
 
+  resources :awards, only: [:index]
+
   resources :artists, only: [:index, :show, :new, :create] do
     resources :songs, only: [:index, :new, :create, :edit, :update]
   end
@@ -18,5 +20,6 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :categories, only: [:index]
+    resources :awards, only: [:create]
   end
 end
