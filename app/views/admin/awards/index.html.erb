@@ -1,0 +1,8 @@
+<h1>Admin - Add A New Award</h1>
+
+<%= form_for :awards do |f|  %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit "Submit" %>
+<% end %>
