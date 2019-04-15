@@ -6,7 +6,7 @@ RSpec.describe "As an admin, " do
       user = User.create!(username: 'admin_1', password: 'password', role: 1)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-      visit admin_awards_path
+      visit awards_path
 
       fill_in "Name", with: "Worst Song of the Year"
 
